@@ -1,19 +1,24 @@
 <!doctype html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hossam Ramadan | Flutter Developer</title>
-  <meta name="description" content="Hossam Ramadan — Passionate Flutter Developer building modern mobile apps with Dart & Firebase.">
+  <meta name="description"
+    content="Hossam Ramadan — Passionate Flutter Developer building modern mobile apps with Dart & Firebase.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/main.js"></script>
 </head>
+
 <body>
+  <!-- Header -->
   <header class="nav">
     <div class="container">
-      <a class="brand" href="#">Hossam Ramadan</a>
+      <a class="brand" href="#">Hossam Ramadan | Flutter Developer</a>
       <button id="menu-btn" aria-label="toggle menu">☰</button>
       <nav id="nav-links">
         <a href="#home">Home</a>
@@ -24,6 +29,7 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main>
     <section class="hero container" id="home">
       <div class="hero-left">
@@ -34,12 +40,16 @@
           <a href="#contact" class="button ghost">Contact Me</a>
         </p>
         <div class="socials">
-          <a href="https://github.com/hossamramadan115" target="_blank" aria-label="GitHub" class="soc">GitHub</a>
-          <a href="https://www.linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank" aria-label="LinkedIn" class="soc">LinkedIn</a>
-          <a href="mailto:hossamramadan115@gmail.com" aria-label="Email" class="soc">Email</a>
-          <a href="https://wa.me/201019148497" target="_blank" aria-label="WhatsApp" class="soc">WhatsApp</a>
+          <a href="https://github.com/hossamramadan115" target="_blank" aria-label="GitHub" class="soc"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank" aria-label="LinkedIn"
+            class="soc"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:hossamramadan115@gmail.com" aria-label="Email" class="soc"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/201019148497" target="_blank" aria-label="WhatsApp" class="soc"><i
+              class="fab fa-whatsapp"></i></a>
         </div>
       </div>
+
       <div class="hero-right">
         <div class="avatar-wrap">
           <img src="images/profile.jpg" alt="Hossam Ramadan" class="avatar">
@@ -47,9 +57,11 @@
       </div>
     </section>
 
+    <!-- About -->
     <section class="about container" id="about">
       <h2>About</h2>
-      <p>I’m a passionate Flutter developer who loves building modern and user-friendly mobile apps using Dart and Firebase. Always learning and exploring new technologies.</p>
+      <p>I’m a passionate Flutter developer who loves building modern and user-friendly mobile apps using Dart and
+        Firebase. Always learning and exploring new technologies.</p>
       <div class="skills">
         <span>Flutter</span>
         <span>Dart</span>
@@ -59,50 +71,80 @@
       </div>
     </section>
 
+    <!-- Projects -->
     <section class="projects container" id="projects">
       <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="images/project_chat.png" alt="Chat App">
-          <div class="card-body">
-            <h3>Chat App</h3>
-            <p>Real-time chat application built with Flutter and Firebase — authentication, realtime DB, push notifications.</p>
-            <p class="card-actions">
-              <a href="#" target="_blank">Live</a>
-              <a href="https://github.com/hossamramadan115" target="_blank">Source</a>
-            </p>
-          </div>
-        </article>
 
-        <article class="card">
-          <img src="images/project_todo.png" alt="Todo App">
-          <div class="card-body">
-            <h3>Todo App</h3>
-            <p>Lightweight todo application using Flutter and Hive for local storage, with offline-first approach.</p>
-            <p class="card-actions">
-              <a href="#" target="_blank">Live</a>
-              <a href="https://github.com/hossamramadan115" target="_blank">Source</a>
-            </p>
-          </div>
-        </article>
+      <div class="project-full">
+        <img src="images/new.PNG" alt="E-Commerce Flutter App" class="project-full-img">
+        <div class="project-full-body">
+          <h3>E-Commerce App</h3>
+          <p>A complete Flutter-based E-Commerce app with Firebase & Clean Architecture — authentication, product
+            management, admin panel, and Stripe payments.</p>
+          <p class="card-actions">
+            <a href="https://www.linkedin.com/posts/hossam-ramadan-7287aa30b_e-commerce-flutter-app-firebase-clean-activity-7368255761606459394-UwE9"
+              target="_blank">🔗 Linkedin Post</a>
+            <a href="https://github.com/hossamramadan115/e_commerce" target="_blank">💻 Github Repo</a>
+          </p>
+        </div>
       </div>
+
+      <div class="project-full">
+        <img src="images/delivery.PNG" alt="Shipping Flutter App" class="project-full-img">
+        <div class="project-full-body">
+          <h3>Shipping App</h3>
+          <p>A full delivery management system with admin and driver dashboards, real-time order tracking,
+            secure Paymob payments, and smooth UI.</p>
+          <p class="card-actions">
+            <a href="#" target="_blank">🔗 Linkedin Post</a>
+            <a href="https://github.com/hossamramadan115/delivery_app" target="_blank">💻 Github Repo</a>
+          </p>
+        </div>
+      </div>
+
+      <article class="card">
+        <img src="images/project_todo.png" alt="Todo App">
+        <div class="card-body">
+          <h3>Todo App</h3>
+          <p>Lightweight todo app using Flutter and Hive for offline-first experience.</p>
+          <p class="card-actions">
+            <a href="#" target="_blank">Live</a>
+            <a href="https://github.com/hossamramadan115" target="_blank">Source</a>
+          </p>
+        </div>
+      </article>
     </section>
 
+    <!-- Contact -->
     <section class="contact container" id="contact">
       <h2>Contact</h2>
-      <p>I'm available for freelance or full-time work. Reach out via email or WhatsApp — I'll reply as soon as I can.</p>
-      <p class="contact-links">
-        <a href="mailto:hossamramadan115@gmail.com" class="button">Email Me</a>
-        <a href="https://wa.me/201019148497" target="_blank" class="button ghost">Message on WhatsApp</a>
-      </p>
+      <p>I'm available for freelance or full-time work. Reach out via Email or WhatsApp!</p>
+      <div class="contact-buttons">
+        <a href="mailto:hossamramadan115@gmail.com" class="button"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://wa.me/201019148497" target="_blank" class="button ghost"><i class="fab fa-whatsapp"></i>
+          WhatsApp</a>
+      </div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-socials">
+        <a href="https://wa.me/201019148497" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1AMxZKR7HG/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/hus_sam_77" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:hossamramadan115@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/hossamramadan115" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
       <p>© <span id="year"></span> Hossam Ramadan — All rights reserved</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>
