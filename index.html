@@ -9,6 +9,7 @@
     content="Hossam Ramadan — Passionate Flutter Developer building modern mobile apps with Dart & Firebase.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,7 +19,7 @@
   <!-- Header -->
   <header class="nav">
     <div class="container">
-      <a class="brand" href="#">Hossam Ramadan | Flutter Developer</a>
+      <a class="brand" href="#home">Hossam Ramadan | Flutter Developer</a>
       <button id="menu-btn" aria-label="toggle menu">☰</button>
       <nav id="nav-links">
         <a href="#home">Home</a>
@@ -40,12 +41,12 @@
           <a href="#contact" class="button ghost">Contact Me</a>
         </p>
         <div class="socials">
-          <a href="https://github.com/hossamramadan115" target="_blank" aria-label="GitHub" class="soc"><i
-              class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank" aria-label="LinkedIn"
-            class="soc"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/hossamramadan115" target="_blank" rel="noopener" aria-label="GitHub"
+            class="soc"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank" rel="noopener"
+            aria-label="LinkedIn" class="soc"><i class="fab fa-linkedin"></i></a>
           <a href="mailto:hossamramadan115@gmail.com" aria-label="Email" class="soc"><i class="fas fa-envelope"></i></a>
-          <a href="https://wa.me/201019148497" target="_blank" aria-label="WhatsApp" class="soc"><i
+          <a href="https://wa.me/201019148497" target="_blank" rel="noopener" aria-label="WhatsApp" class="soc"><i
               class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -75,6 +76,125 @@
     <section class="projects container" id="projects">
       <h2>Projects</h2>
 
+      <!-- ===== Speed Fleet (Featured) ===== -->
+      <article class="sf" id="speedfleet">
+        <div class="sf-head">
+          <span class="sf-badge"><i class="fas fa-bolt"></i> Featured · Live on App Store &amp; Google Play</span>
+          <h3>Speed Fleet</h3>
+          <p class="sf-sub">Fleet &amp; Delivery Management Platform</p>
+          <p class="sf-desc">
+            A fast, reliable mobile application built to streamline fleet operations and delivery workflows,
+            with real-time tracking, instant push notifications, and a clean, intuitive interface.
+            Designed with Clean Architecture for scalability and maintainability, and published on both the
+            App Store and Google Play.
+          </p>
+          <div class="sf-tech">
+            <span>Flutter</span><span>Bloc</span><span>Firebase Push Notifications</span><span>Google
+              Maps</span><span>Clean Architecture</span>
+          </div>
+          <div class="sf-stores">
+            <a class="sf-store" href="https://apps.apple.com/kw/app/speed-fleet/id6761889339" target="_blank"
+              rel="noopener">
+              <i class="fab fa-apple"></i><span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="sf-store" href="https://play.google.com/store/apps/details?id=com.teknuugy.speedfleet"
+              target="_blank" rel="noopener">
+              <i class="fab fa-google-play"></i><span><small>Get it on</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="sf-gallery">
+          <button class="sf-arrow" id="sf-prev" aria-label="Previous screens">‹</button>
+          <div class="sf-track" id="sf-track">
+            <figure><img src="images/sf1.webp" width="333" height="592" alt="Speed Fleet screen 1" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf2.webp" width="333" height="592" alt="Speed Fleet screen 2" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf3.webp" width="333" height="592" alt="Speed Fleet screen 3" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf4.webp" width="333" height="592" alt="Speed Fleet screen 4" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf5.webp" width="333" height="592" alt="Speed Fleet screen 5" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf6.webp" width="333" height="592" alt="Speed Fleet screen 6" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf7.webp" width="333" height="592" alt="Speed Fleet screen 7" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf8.webp" width="333" height="592" alt="Speed Fleet screen 8" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf9.webp" width="333" height="592" alt="Speed Fleet screen 9" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf10.webp" width="333" height="592" alt="Speed Fleet screen 10" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf11.webp" width="333" height="592" alt="Speed Fleet screen 11" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/sf12.webp" width="333" height="592" alt="Speed Fleet screen 12" loading="lazy"
+                decoding="async"></figure>
+          </div>
+          <button class="sf-arrow" id="sf-next" aria-label="Next screens">›</button>
+        </div>
+        <div class="sf-progress"><span id="sf-bar"></span></div>
+        <p class="sf-hint">Swipe or drag to explore all 12 screens · Click a screen to enlarge</p>
+      </article>
+
+      <div class="sf-lightbox" id="sf-lightbox" aria-hidden="true">
+        <button class="sf-close" id="sf-close" aria-label="Close">×</button>
+        <button class="sf-lb-nav sf-lb-prev" id="sf-lb-prev" aria-label="Previous">‹</button>
+        <img id="sf-lb-img" alt="">
+        <button class="sf-lb-nav sf-lb-next" id="sf-lb-next" aria-label="Next">›</button>
+      </div>
+
+      <!-- ===== Thiqah (Featured) ===== -->
+      <article class="sf th" id="thiqah">
+        <div class="sf-head">
+          <span class="sf-badge"><i class="fas fa-star"></i> Featured · Live on App Store &amp; Google Play</span>
+          <h3>Thiqah | ثقة</h3>
+          <p class="sf-sub">Smart Home Services Platform</p>
+          <p class="sf-desc">
+            A trusted marketplace that connects users with reliable contractors, engineers, suppliers, and home
+            service providers through one seamless experience, making it easy to discover, compare, and choose the
+            right home solutions. Built with Clean Architecture for scalability, with secure local payment
+            integration and live location features, and published on both the App Store and Google Play in Kuwait.
+          </p>
+          <div class="sf-tech">
+            <span>Flutter</span><span>Bloc</span><span>Firebase Push Notifications</span><span>Kuwaiti Payment
+              Gateways</span><span>Google Maps Integration</span>
+          </div>
+          <div class="sf-stores">
+            <a class="sf-store" href="https://apps.apple.com/kw/app/thiqah-%D8%AB%D9%82%D8%A9/id6781798932"
+              target="_blank" rel="noopener">
+              <i class="fab fa-apple"></i><span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="sf-store" href="https://play.google.com/store/apps/details?id=com.tek.thiqah" target="_blank"
+              rel="noopener">
+              <i class="fab fa-google-play"></i><span><small>Get it on</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="sf-gallery">
+          <button class="sf-arrow" id="th-prev" aria-label="Previous screens">‹</button>
+          <div class="sf-track" id="th-track">
+            <figure><img src="images/th1.webp" width="333" height="592" alt="Thiqah screen 1" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/th2.webp" width="333" height="592" alt="Thiqah screen 2" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/th3.webp" width="333" height="592" alt="Thiqah screen 3" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/th4.webp" width="333" height="592" alt="Thiqah screen 4" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/th5.webp" width="333" height="592" alt="Thiqah screen 5" loading="lazy"
+                decoding="async"></figure>
+            <figure><img src="images/th6.webp" width="333" height="592" alt="Thiqah screen 6" loading="lazy"
+                decoding="async"></figure>
+          </div>
+          <button class="sf-arrow" id="th-next" aria-label="Next screens">›</button>
+        </div>
+        <div class="sf-progress"><span id="th-bar"></span></div>
+        <p class="sf-hint">Swipe or drag to explore the screens · Click a screen to enlarge</p>
+      </article>
+
       <div class="project-full">
         <img src="images/new.PNG" alt="E-Commerce Flutter App" class="project-full-img">
         <div class="project-full-body">
@@ -83,8 +203,8 @@
             management, admin panel, and Stripe payments.</p>
           <p class="card-actions">
             <a href="https://www.linkedin.com/posts/hossam-ramadan-7287aa30b_e-commerce-flutter-app-firebase-clean-activity-7368255761606459394-UwE9"
-              target="_blank">🔗 Linkedin Post</a>
-            <a href="https://github.com/hossamramadan115/e_commerce" target="_blank">💻 Github Repo</a>
+              target="_blank" rel="noopener">🔗 Linkedin Post</a>
+            <a href="https://github.com/hossamramadan115/e_commerce" target="_blank" rel="noopener">💻 Github Repo</a>
           </p>
         </div>
       </div>
@@ -96,14 +216,13 @@
           <p>A full delivery management system with admin and driver dashboards, real-time order tracking,
             secure Paymob payments, and smooth UI.</p>
           <p class="card-actions">
-            <a href="#" target="_blank">🔗 Linkedin Post</a>
-            <a href="https://github.com/hossamramadan115/delivery_app" target="_blank">💻 Github Repo</a>
+            <a href="https://github.com/hossamramadan115/delivery_app" target="_blank" rel="noopener">💻 Github Repo</a>
           </p>
         </div>
       </div>
 
       <div class="project-full">
-        <img src="images/note.PNG" alt="Shipping Flutter App" class="project-full-img">
+        <img src="images/note.PNG" alt="Notes Flutter App" class="project-full-img">
         <div class="project-full-body">
           <h3>Notes App</h3>
           <p>A professional, cross-platform note-taking application built with Flutter, offering a sleek and modern
@@ -113,14 +232,14 @@
             Featuring a stylish Poppins font, dark mode, and color-coded notes for better organization.</p>
           <p class="card-actions">
             <a href="https://www.linkedin.com/posts/hossam-ramadan-7287aa30b_flutter-firebase-noteapp-activity-7338197122485276672-KB0S?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE72NZABly79BXx4Mey1lnkG-SqWE46vl9o"
-              target="_blank">🔗 Linkedin Post</a>
-            <a href="https://github.com/hossamramadan115/notes_app" target="_blank">💻 Github Repo</a>
+              target="_blank" rel="noopener">🔗 Linkedin Post</a>
+            <a href="https://github.com/hossamramadan115/notes_app" target="_blank" rel="noopener">💻 Github Repo</a>
           </p>
         </div>
       </div>
 
       <div class="project-full">
-        <img src="images/book.PNG" alt="Shipping Flutter App" class="project-full-img">
+        <img src="images/book.PNG" alt="Book Flutter App" class="project-full-img">
         <div class="project-full-body">
           <h3>Book App</h3>
           <p>A modern, full-featured book management application built with Flutter and Dart, offering a smooth and
@@ -132,42 +251,47 @@
             seamlessly.</p>
           <p class="card-actions">
             <a href="https://www.linkedin.com/posts/hossam-ramadan-7287aa30b_flutter-bookapp-mobiledevelopment-activity-7349773560132870144-vy_6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE72NZABly79BXx4Mey1lnkG-SqWE46vl9o"
-              target="_blank">🔗 Linkedin Post</a>
-            <a href="https://github.com/hossamramadan115/book_app_2" target="_blank">💻 Github Repo</a>
+              target="_blank" rel="noopener">🔗 Linkedin Post</a>
+            <a href="https://github.com/hossamramadan115/book_app_2" target="_blank" rel="noopener">💻 Github Repo</a>
           </p>
         </div>
       </div>
+    </section>
 
-      <!-- Contact -->
-      <section class="contact container" id="contact">
-        <h2>Contact</h2>
-        <p>I'm available for freelance or full-time work. Reach out via Email or WhatsApp!</p>
-        <div class="contact-buttons">
-          <a href="mailto:hossamramadan115@gmail.com" class="button"><i class="fas fa-envelope"></i> Email Me</a>
-          <a href="https://wa.me/201019148497" target="_blank" class="button ghost"><i class="fab fa-whatsapp"></i>
-            WhatsApp</a>
-        </div>
-      </section>
+    <!-- Contact -->
+    <section class="contact container" id="contact">
+      <h2>Contact</h2>
+      <p>I'm available for freelance or full-time work. Reach out via Email or WhatsApp!</p>
+      <div class="contact-buttons">
+        <a href="mailto:hossamramadan115@gmail.com" class="button"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://wa.me/201019148497" target="_blank" rel="noopener" class="button ghost"><i
+            class="fab fa-whatsapp"></i>
+          WhatsApp</a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-socials">
-        <a href="https://wa.me/201019148497" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/share/1AMxZKR7HG/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/hus_sam_77" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:hossamramadan115@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/hossamramadan115" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/201019148497" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+            class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1AMxZKR7HG/" target="_blank" rel="noopener" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/hus_sam_77" target="_blank" rel="noopener" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/hossam-ramadan-7287aa30b" target="_blank" rel="noopener"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:hossamramadan115@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/hossamramadan115" target="_blank" rel="noopener" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
       </div>
       <p>© <span id="year"></span> Hossam Ramadan — All rights reserved</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
