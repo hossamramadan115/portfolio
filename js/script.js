@@ -125,3 +125,41 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     initGallery({ track: "sf-track", prev: "sf-prev", next: "sf-next", bar: "sf-bar" });
     initGallery({ track: "th-track", prev: "th-prev", next: "th-next", bar: "th-bar" });
 })();
+
+
+// ===== Reveal on scroll + stat counters =====
+(function () {
+  document.documentElement.classList.add("js");
+
+  const items = document.querySelectorAll(".reveal");
+  const counters = document.querySelectorAll("[data-count]");
+
+  const runCounter = (el) => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const duration = 1200;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("in"));
+    counters.forEach((el) => (el.textContent = el.dataset.count));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("in");
+      entry.target.querySelectorAll("[data-count]").forEach(runCounter);
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach((el) => io.observe(el));
+})();
