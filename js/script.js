@@ -124,42 +124,47 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 
     initGallery({ track: "sf-track", prev: "sf-prev", next: "sf-next", bar: "sf-bar" });
     initGallery({ track: "th-track", prev: "th-prev", next: "th-next", bar: "th-bar" });
+    initGallery({ track: "ve-track", prev: "ve-prev", next: "ve-next", bar: "ve-bar" });
+    initGallery({ track: "md-track", prev: "md-prev", next: "md-next", bar: "md-bar" });
+    initGallery({ track: "za-track", prev: "za-prev", next: "za-next", bar: "za-bar" });
+    initGallery({ track: "fm-track", prev: "fm-prev", next: "fm-next", bar: "fm-bar" });
+    initGallery({ track: "ys-track", prev: "ys-prev", next: "ys-next", bar: "ys-bar" });  
 })();
 
 
 // ===== Reveal on scroll + stat counters =====
 (function () {
-  document.documentElement.classList.add("js");
+    document.documentElement.classList.add("js");
 
-  const items = document.querySelectorAll(".reveal");
-  const counters = document.querySelectorAll("[data-count]");
+    const items = document.querySelectorAll(".reveal");
+    const counters = document.querySelectorAll("[data-count]");
 
-  const runCounter = (el) => {
-    const target = parseInt(el.dataset.count, 10) || 0;
-    const duration = 1200;
-    const start = performance.now();
-    const tick = (now) => {
-      const p = Math.min((now - start) / duration, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(tick);
+    const runCounter = (el) => {
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const duration = 1200;
+        const start = performance.now();
+        const tick = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
     };
-    requestAnimationFrame(tick);
-  };
 
-  if (!("IntersectionObserver" in window)) {
-    items.forEach((el) => el.classList.add("in"));
-    counters.forEach((el) => (el.textContent = el.dataset.count));
-    return;
-  }
+    if (!("IntersectionObserver" in window)) {
+        items.forEach((el) => el.classList.add("in"));
+        counters.forEach((el) => (el.textContent = el.dataset.count));
+        return;
+    }
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("in");
-      entry.target.querySelectorAll("[data-count]").forEach(runCounter);
-      io.unobserve(entry.target);
-    });
-  }, { threshold: 0.15 });
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("in");
+            entry.target.querySelectorAll("[data-count]").forEach(runCounter);
+            io.unobserve(entry.target);
+        });
+    }, { threshold: 0.15 });
 
-  items.forEach((el) => io.observe(el));
+    items.forEach((el) => io.observe(el));
 })();
